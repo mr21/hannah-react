@@ -4,7 +4,7 @@
 
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>01 - simple HTML Hello World</title>
+<title>02 - simple React Hello World</title>
 <link rel="stylesheet" href="../reset.css" />
 
 </head>
@@ -15,9 +15,17 @@
 <script src="../react-18.2.0.min.js"></script>
 <script src="../react-dom-18.2.0.min.js"></script>
 <script>
+
+// `ReactDOM.createRoot` lets you create a root to display React components
+// inside a browser DOM node.
+// The `<div id="app"></div>` will be our root DOM node.
 const app = ReactDOM.createRoot( document.getElementById( 'app' ) );
 
-app.render( React.createElement( 'b', {}, 'Hello World!' ) );
+// Once we have our root, we can launch the first render().
+// Here our example is really simple, we create a simple `<b>Hello World!</b>`
+// inside the rood DOM node.
+app.render( React.createElement( 'b', null, 'Hello World!' ) );
+
 </script>
 </body>
 </html>
