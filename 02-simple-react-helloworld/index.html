@@ -26,6 +26,23 @@ const app = ReactDOM.createRoot( document.getElementById( 'app' ) );
 // inside the rood DOM node.
 app.render( React.createElement( 'b', null, 'Hello World!' ) );
 
+// Keep in mind that nobody write HTML that way ☝️
+// Really few people will use React.createElement() directly.
+// People will actually write it like:
+
+// app.render( <b>Hello World!</b> );
+
+// With HTML directly inside JavaScript code without being in quote "" or ''.
+// How is it possible? Because of JSX.
+// JSX is a code-processing software who will convert HTML inside JS code into
+// a certain shape, so with React it will be like 👇
+
+// <b>Hello World!</b>
+//       ⬇️ ⬇️ ⬇️
+// React.createElement( 'b', null, 'Hello World!' )
+
+// The HTML being converted into JS function calls then no syntaxe error will
+// occurs in the browser.
 </script>
 </body>
 </html>
